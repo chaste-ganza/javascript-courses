@@ -1,113 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Syllable Splitter</title>
-    <style>
-        body { font-family: Arial; padding:20px; }
-        input { padding: 10px; width: 250px; }
-        button { padding: 10px; margin-left: 10px; }
-        #output { margin-top:20px; font-size:20px; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-
-<h2>Syllable Splitter</h2>
-
-<input id="word" placeholder="Type a word...">
-<button onclick="showSyllables()">Split</button>
-
-<div id="output"></div>
-
-<script>
-function splitIntoSyllables(word) {
-    word = word.toLowerCase().trim();
-
-    const vowels = "aeiouy";
-    const vowelGroups = ["ai","ea","ee","oo","ie","oi","ou","ue","au","ei"];
-    const specialEndings = ["tion","sion","ment","ness","ful","able","ible","ing","er","est","less","ly","al","ed","ish","ous"];
-
-    let syllables = [];
-    let current = "";
-
-    let i = 0;
-    while (i < word.length) {
-        current += word[i];
-
-        const isVowel = vowels.includes(word[i]);
-
-        // Detect vowel groups: ea, ai, oo...
-        if (i+1 < word.length) {
-            const pair = word[i] + word[i+1];
-            if (vowelGroups.includes(pair)) {
-                current += word[i+1];
-                i += 2;
-                syllables.push(current);
-                current = "";
-                continue;
-            }
-        }
-
-        if (isVowel) {
-
-            // Rule 1: VCV → V-CV
-            if (
-                i+2 < word.length &&
-                !vowels.includes(word[i+1]) && 
-                vowels.includes(word[i+2])
-            ) {
-                syllables.push(current);
-                current = "";
-                i++;
-                continue;
-            }
-
-            // Rule 2: VCCV → VC-CV
-            if (
-                i+3 < word.length &&
-                !vowels.includes(word[i+1]) &&
-                !vowels.includes(word[i+2]) &&
-                vowels.includes(word[i+3])
-            ) {
-                current += word[i+1];
-                syllables.push(current);
-                current = "";
-                i += 2;
-                continue;
-            }
-
-            // Rule 3: Check special endings
-            for (let ending of specialEndings) {
-                if (word.slice(i).startsWith(ending)) {
-                    syllables.push(current);
-                    syllables.push(ending);
-                    return syllables;
-                }
-            }
-        }
-
-        i++;
-    }
-
-    if (current.length > 0) syllables.push(current);
-
-    return syllables;
-}
-
-// 🔥 The missing function that displays syllables
-function showSyllables() {
-    const inputWord = document.getElementById("word").value;
-    const outputDiv = document.getElementById("output");
-
-    if (!inputWord.trim()) {
-        outputDiv.innerHTML = "Please enter a word.";
-        return;
-    }
-
-    const parts = splitIntoSyllables(inputWord);
-
-    outputDiv.innerHTML = "<b>Syllables: </b>" + parts.join(" • ");
-}
-</script>
-
+    <textarea name="" id="text"></textarea>
+    <button id="read">Read</button>
+    <script src="speak.js"></script>
 </body>
 </html>
