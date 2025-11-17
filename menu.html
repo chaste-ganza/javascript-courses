@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Page</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #7b7b7b, #bdbdbd);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        #paragraph {
+            font-size: 1.2rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #submit {
+            width: 100px;
+            position: relative;
+            height: 60px;
+            border: none;
+            border-radius: 8px;
+            background-color: #0078d7;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        #submit:hover {
+            background-color: #005fa3;
+            transform: translateY(-3px);
+        }
+
+        #submit:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="paragraph">Welcome! Click below to begin.</p>
+        <button id="submit">Can't touch this</button>
+    </div>
+
+    <script src="menu.js">
+        
+    </script>
+</body>
+</html>

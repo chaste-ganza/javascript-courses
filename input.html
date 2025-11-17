@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info collection</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin: 200px 0px; align-content: center;">
+    <h1 id="paragraph">student card creator</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name" required>
+    <input type="number" id="ageInput" placeholder="Enter your age" required>
+    <input type="text" id="schoolInput" placeholder="Enter your school" required>
+    <input type="number" id="codeInput" placeholder="Enter your student code" required>
+    <button id="submit" type="button">Click to get started</button>
+    <button id="submitName" type="submit">Submit</button>
+    <button id="submitAge" type="submit">Submit</button>
+    <button id="submitSchool" type="submit">Submit</button>
+    <button id="submitCode" type="submit">Submit</button>
+    <br>
+    <p id="alertMessage"></p>
+    <div id="cardLayout" style="align-items: center; width: 500px; position: absolute;">
+        <div>
+        <h2>Student participation Card</h2>
+        <div style="text-align: left; position: relative;">
+            Full name: <b id="nameDisplay"></b><br>
+            Age : <b id="ageDisplay"></b><br>
+            School : <b id="schoolDisplay"></b><br>
+            Student code : <b id="codeDisplay"></b><br>
+        </div>
+
+    </div>
+    </div>
+    
+    <script src="input.js"></script>
+</body>
+</html>
