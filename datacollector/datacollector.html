@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+        <label for="inputName">name</label>
+        <br>
+        <input type="text" placeholder="Enter your name" id="inputName">
+        <br>
+        <label for="inputAge">Age</label>
+        <br>
+        <input type="number" placeholder="Enter your age" id="inputAge">
+        <br>
+        <label for="gender">Gender</label>
+        <br>
+        <label for="male">Male</label>
+        <input type="radio" class="gender" name="gender" id="gender" value="male">
+        <br>
+        <label for="female">Female</label>
+        <input type="radio" class="gender" name="gender" id="gender" value="female">
+        <br>
+        <input type="submit" id="submit">
+
+        <div id="space">
+        <table border="1" id="table">
+            <tr>
+                <th>Index</th>
+                <th>Names</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </table>
+    </div>
+    <script src="datacollector.js"></script>
+</body>
+</html>
