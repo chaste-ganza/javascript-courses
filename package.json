@@ -1,0 +1,26 @@
+{
+  "name": "js-basics",
+  "version": "1.0.0",
+  "description": "practicing node",
+  "keywords": [
+    "8ball",
+    "game",
+    "8ball"
+  ],
+  "homepage": "https://github.com/chaste-ganza/javascript-courses#readme",
+  "bugs": {
+    "url": "https://github.com/chaste-ganza/javascript-courses/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaste-ganza/javascript-courses.git"
+  },
+  "license": "ISC",
+  "author": "chaste",
+  "type": "commonjs",
+  "main": "8Ball.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
